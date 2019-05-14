@@ -1,1 +1,20 @@
 This is the folder for task1: brand cleaning
+There are two solutions for this task
+1. Regular expression
+    constructed 3 possible regular expressions
+      a. brand name starts with "lauren"
+      b. brand name starts with "polo"
+      c. brand name starts with "ralph"
+    Pro:
+      Regular expression is more flexible and maybe faster than looping through a list and find matches.
+    Con:
+      It might also include some matches that are not correct. For example, there are two urls that are included in the result
+      This solution cannot distinguish urls with proper brand name clearly.
+2. Brand list
+    Go through the original data and build a list of all possible combinations
+    Pro:
+      Starightforward, easy
+    Con:
+      It is not as flexible as regular expression
+      Takes manual effort to keep the list updated
+      Might miss some possible cominations that are not present in current dataset, but might appear in the future
