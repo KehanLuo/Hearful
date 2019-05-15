@@ -1,1 +1,7 @@
 This folder contains code and result for the apparel task
+apparel.py is a Python program that reads the apparel predicted data from the model
+apparel.csv is the output that contains how many times each theme appears and the number of positive/negative for each theme
+
+Observations:
+1. For each theme, pos + neg < total count. It is because there are some data entries that have specific theme but the sentiment label is blank
+2. There are a few data entries that are noisy data (wrong labels). For example, there are some 1s in the sentiment_label column and some pos/neg in the theme_exists column
