@@ -5,7 +5,7 @@ apparel.csv is the comparison output file. It contains the statistic values of e
 
 Observations:
 1. The hand validated dataset only has 298 data entries, while the model output has 300 data entries.
-2. There is one data entry that has wrong labels for both existence and sentiments. 
+2. There is one data entry that has wrong labels for both existence and sentiments. (see error_data_entry.png)
    After checking that row, I think the possible reason is that there are non-English characters in the "review_title" column
 
 Retionales:
