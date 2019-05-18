@@ -1,1 +1,26 @@
 This folder contains the code and result that compares the model output with hand validated data
+
+apparel.py is the Python program that compares the model output with hand validated dataset
+apparel.csv is the comparison output file. It contains the statistic values (accuracy, precision, recall, fmeasure) of each theme existence and theme sentiments
+
+Observations:
+1. The hand validated dataset only has 298 data entries, while the model output has 300 data entries.
+2. There is one data entry that has wrong labels for both existence and sentiments. After checking that row, I think the possible reason is that there are non-English characters in the "review_title" column
+
+Retionales:
+1. Each theme has a 2x2 table for existence and a 2x2 table for sentiment
+    2x2 table for existence:
+                      hand_exist      hand_not_exist
+    model_exist       true positive   false positive
+    model_not_exist   false negative  true negative
+    
+    2x2 table for sentiment:
+                   hand_pos      hand_neg
+    model_pos   true positive   false positive
+    model_neg   false negative  true negative
+
+2. Formula
+    Accuracy = (tp + tn) / (tp + tn + fp + fn)
+    precison = tp / (tp + fp)
+    recall = tp / (tp + fn)
+    fmeasure = 2 * precision * recall / (precision + recall)
